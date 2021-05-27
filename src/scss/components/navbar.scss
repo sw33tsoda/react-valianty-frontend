@@ -1,0 +1,23 @@
+.navbar {
+    @include flex(row,space-between,center,25px);
+    height: 100%;
+    font-family: $pattaya;
+    
+    &__nav {
+        @include flex(row,flex-start,center,50px)
+        &__wrapper {
+            @include flex(row,space-between,center,10px);
+            &__item {
+                color:black;
+                font-weight: bold;
+                padding: 5px;
+                border-radius: 0.25em;
+                @include typical-button-fx('hover');
+                
+                &--active {
+                    @include typical-button-fx('active');
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+@mixin flex($flex-direction:row,$justify-content:center, $align-items:center,$col-gap:5px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    column-gap: $col-gap;
+}
+
+@mixin typical-button-fx($event-type,$transition:0.25s,$background-color:white) {
+    transition: $transition;
+    @if $event-type == 'hover' {
+        &:hover {
+            box-shadow: 2px 2px silver;
+            background-color: $background-color;
+        }
+    }
+
+    @if $event-type == 'active' {
+        box-shadow: 2px 2px silver;
+        background-color: $background-color;
+    }
+}

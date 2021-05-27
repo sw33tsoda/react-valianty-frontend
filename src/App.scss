@@ -1,0 +1,14 @@
+@import './scss/variables';
+@import './scss/mixins';
+
+body {
+    background-color: $bg-color;
+    font-family: $roboto;
+}
+
+a {
+    text-decoration: none;
+}
+
+// HEADER
+@import './scss/layout/header.scss';

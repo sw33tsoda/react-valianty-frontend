@@ -1,21 +1,18 @@
-
-import { useSelector } from 'react-redux';
-import './App.css';
-import Table from './components/Table';
-import { TaskItem, TaskList } from './interfaces/task';
+import './App.scss';
+import Body from './layout/Body';
+import Footer from './layout/Footer';
+import Header from './layout/Header';
+import { BrowserRouter as Router } from "react-router-dom";
 
 function App() {
-  const list:TaskList<TaskItem> = [
-    { 
-      id:'01',
-      description:'Hello world',
-      created_at:new Date(),
-      expiration_date:new Date()
-    },
-  ];
+  
   return (
     <div className="App">
-      <Table data={list}></Table>
+      <Router>
+        <Header/>
+        <Body/>
+        <Footer/>
+      </Router>
     </div>
   );
 }
