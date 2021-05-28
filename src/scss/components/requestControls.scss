@@ -1,0 +1,68 @@
+.request-controls {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    @include flex(row,space-between,center);
+    .custom-product, .custom-overlay {
+        width: inherit;
+        height: inherit;
+        padding: 25px;
+        box-sizing: border-box;
+    }
+
+    .custom-product {
+        background-color: $light-white;
+        @include flex;
+        img {
+            width: 50%;
+        }
+    }
+
+    .custom-overlay {
+        @include flex(column,flex-start,flex-start,0,10px);
+        &__control-wrapper {
+            width: inherit;
+            @include flex(column,flex-start,flex-start,0,5px);
+            &__label {
+                font-weight: bold;
+            }
+
+            &__range-slider {
+
+            }
+
+            &__payment {
+                margin-top: 10px;
+                @include flex(column,flex-start,flex-start,0,5px);
+                
+                &__title {
+                    font-weight: bold;
+                }
+
+                &__table {
+                    width: 100%;
+                    table-layout: fixed;
+                    thead {
+                        td {
+                            font-weight: bold;
+                            font-style: normal !important;
+                        }
+                    }
+
+                    tbody {
+                        tr:last-child {
+                            font-weight: bold;
+                            font-size:1.25em;
+                        }
+                    }
+
+                    tr td:last-child {
+                        text-align: right;
+                        font-style: italic;
+                    }
+                }
+                
+            }
+        }
+    }
+}

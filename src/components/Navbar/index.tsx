@@ -1,4 +1,7 @@
+import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
+import { switchCurrencyFormat } from "../../redux/slices/currencySlice";
+import { AppDispatch, RootState } from "../../redux/store";
 
 const navLinksList = [
     { url: '/request', label: 'Yêu cầu' },
@@ -7,10 +10,22 @@ const navLinksList = [
 ];
 
 const render = (navLinksList:any,className:string,activeClassName:string) => navLinksList.map((item:any,index:number) => (
-    <NavLink className={className} activeClassName={className + activeClassName} to={item.url}>{item.label}</NavLink>
+    <NavLink 
+        key={index}
+        className={className} 
+        activeClassName={className + activeClassName} 
+        to={item.url}
+    >
+        {item.label}
+    </NavLink>
 ))
 
 export default function Navbar() {
+    const currency = useSelector((state:RootState) => state.currency);
+    const dispatch:AppDispatch = useDispatch();
+    const handleSwitchCurrencyFormat = () => {
+        dispatch(switchCurrencyFormat());
+    }
     return (
         <div className="navbar">
             <div className="navbar__nav">
@@ -24,6 +39,7 @@ export default function Navbar() {
                 <NavLink to="/request"><i className="navbar__nav__wrapper__item fas fa-search"></i></NavLink>
                 <NavLink to="/contact"><i className="navbar__nav__wrapper__item fas fa-shopping-cart"></i></NavLink>
                 <NavLink to="/products"><i className="navbar__nav__wrapper__item far fa-lightbulb"></i></NavLink>
+                <i className="navbar__nav__wrapper__item currency" onClick={handleSwitchCurrencyFormat}>{currency.symbol}</i>
             </div>
         </div>
     );

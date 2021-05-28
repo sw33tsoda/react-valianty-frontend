@@ -4,7 +4,7 @@
     font-family: $pattaya;
     
     &__nav {
-        @include flex(row,flex-start,center,50px)
+        @include flex(row,flex-start,center,50px);
         &__wrapper {
             @include flex(row,space-between,center,10px);
             &__item {
@@ -17,6 +17,11 @@
                 &--active {
                     @include typical-button-fx('active');
                 }
+            }
+
+            .currency {
+                font-family: $roboto;
+                font-style: normal !important;
             }
         }
     }

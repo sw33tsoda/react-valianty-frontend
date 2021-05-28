@@ -1,7 +1,10 @@
+import RequestControls from "../../../components/RequestControls";
+
 export default function Request() {
+
     return (
         <div className="request">
-            this is request
+            <RequestControls/>
         </div>
     );
 }

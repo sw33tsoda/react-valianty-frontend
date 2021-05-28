@@ -10,5 +10,11 @@ a {
     text-decoration: none;
 }
 
+// FORM
+@import './scss/layout/form.scss';
+
 // HEADER
 @import './scss/layout/header.scss';
+
+// BODY
+@import './scss/layout/body.scss';

@@ -1,0 +1,8 @@
+.body {
+    max-width: 1150px;
+    margin:auto;
+
+    .request {
+        @import './../components/requestControls.scss';
+    }
+}
