@@ -18,7 +18,8 @@
     }
 
     @if $event-type == 'active' {
-        box-shadow: 2px 2px silver;
-        background-color: $background-color;
+        // box-shadow: 2px 2px silver;
+        background-color: black !important;
+        color:white !important;
     }
 }

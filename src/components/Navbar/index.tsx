@@ -36,9 +36,9 @@ export default function Navbar() {
             </div>
 
             <div className="navbar__nav__wrapper">
-                <NavLink to="/request"><i className="navbar__nav__wrapper__item fas fa-search"></i></NavLink>
-                <NavLink to="/contact"><i className="navbar__nav__wrapper__item fas fa-shopping-cart"></i></NavLink>
-                <NavLink to="/products"><i className="navbar__nav__wrapper__item far fa-lightbulb"></i></NavLink>
+                <i className="navbar__nav__wrapper__item fas fa-search"></i>
+                <i id="cart" className="navbar__nav__wrapper__item fas fa-shopping-cart"></i>
+                <i className="navbar__nav__wrapper__item far fa-lightbulb"></i>
                 <i className="navbar__nav__wrapper__item currency" onClick={handleSwitchCurrencyFormat}>{currency.symbol}</i>
             </div>
         </div>

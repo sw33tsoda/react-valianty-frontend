@@ -1,7 +1,9 @@
 .navbar {
     @include flex(row,space-between,center,25px);
     height: 100%;
-    font-family: $pattaya;
+    h1 {
+        font-family: $pattaya;
+    }
     
     &__nav {
         @include flex(row,flex-start,center,50px);

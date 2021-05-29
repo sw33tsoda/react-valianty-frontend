@@ -4,12 +4,16 @@
     height: 25px;
     background: black;
     outline: none;
-    opacity: 0.7;
+    opacity: 0.2;
     -webkit-transition: .2s;
     transition: opacity .2s;
     padding-left: 5px;
     padding-right: 5px;
     box-sizing: border-box;
+
+    &:hover {
+        opacity: 0.7;
+    }
     &::-webkit-slider-thumb {
         -webkit-appearance: none;
         appearance: none;
@@ -36,9 +40,52 @@
         min-width: 40px;
         padding: 5px;
         @include typical-button-fx('hover');
-        
+        // &:hover {
+            // color: black !important;
+        // }
         &--active {
             @include typical-button-fx('active');
         }
     }
+}
+
+.button {
+    @include flex;
+    background-color: black;
+    height: 25px;
+    border:0;
+    outline: 0;
+    color: white;
+    width: 100%;
+    font-weight: bold;
+    @include typical-button-fx('hover');
+    &:hover {
+        color:black !important;
+    }
+}
+
+.input {
+    border:0;
+    outline:0;
+    background:rgba(0,0,0,0.25);
+    height: 25px;
+    text-indent: 5px;
+    color:white;
+    font-family: $fira;
+}
+
+.input-number {
+    @extend .input;
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}
+
+.input-textarea {
+    @extend .input;
+    width: 100%;
+    padding: 5px 2.5px 5px 2.5px;
+    box-sizing: border-box;
+    text-indent: none;
 }

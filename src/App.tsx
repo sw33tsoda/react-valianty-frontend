@@ -11,7 +11,7 @@ function App() {
       <Router>
         <Header/>
         <Body/>
-        <Footer/>
+        {/* <Footer/> */}
       </Router>
     </div>
   );

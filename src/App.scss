@@ -1,9 +1,10 @@
 @import './scss/variables';
 @import './scss/mixins';
+@import './scss/breakpoints';
 
 body {
     background-color: $bg-color;
-    font-family: $roboto;
+    font-family: $fira;
 }
 
 a {

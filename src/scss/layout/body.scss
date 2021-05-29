@@ -5,4 +5,8 @@
     .request {
         @import './../components/requestControls.scss';
     }
+
+    .contact {
+        @import './../components/contactForm.scss';
+    }
 }
