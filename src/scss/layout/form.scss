@@ -89,3 +89,22 @@
     box-sizing: border-box;
     text-indent: none;
 }
+
+.form-group {
+    width: 100%;
+    @include flex(column,flex-start,flex-start,5px,5px)
+}
+
+.form-error {
+    color:crimson;
+    font-size: 0.6em;
+}
+
+.legend {
+
+}
+
+.label {
+    font-weight: bold;
+    @include flex(row,flex-start,center);
+}
